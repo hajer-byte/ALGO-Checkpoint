@@ -1,0 +1,25 @@
+ALGORITHM Sentence
+VAR
+    sentence: string;
+    I,length_sentence: INTEGER;
+    space : INTEGER := 1;
+    vowels : INTEGER := 0;
+BEGIN
+      Read(sentence);
+      length_sentence:= sentence.length -1 ; 
+
+     FOR I FROM 0 TO length_sentence-1 STEP 1 DO {
+  
+        IF((sentence[I]= "a") OR (sentence[I]= "e") OR (sentence[I]= "i") OR (sentence[I]= "o") OR (sentence[I]= "u") ){
+          vowels:=vowels+1;
+        }
+
+        END_IF
+        IF(sentence[I]= " "){
+          space:=space+1;
+        }
+        END_IF   
+     END_FOR  
+    }
+ Write("the length of the sentence:"+length_sentence+"that contains"+vowels+"and"+space+"space .")
+END
